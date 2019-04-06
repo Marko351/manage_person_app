@@ -9,7 +9,7 @@ Install all needed dependecies for server side
 ### npm run client-install
 Install all needed dependecies for client side
 
-### npm run dev
+## npm run dev
 Runs the client mode on http://localhost:3000    
 Also   
 Runs the server mode on http://localhost:5000
