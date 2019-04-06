@@ -18,17 +18,6 @@ function errorReducer(state = errorState, action) {
   }
 }
 
-// Create person reducer
-const createState = {
-  person: {}
-};
-function createReducer(state = createState, action) {
-  switch (action.type) {
-    default:
-      return state;
-  }
-}
-
 //People reducer
 const getPeopleState = {
   people: [],
@@ -69,24 +58,7 @@ function peopleReducer(state = getPeopleState, action) {
   }
 }
 
-// const getPersonState = {};
-// function getPerson(state = getPeopleState, action) {
-//   switch (action.type) {
-//     case GET_PERSON:
-//       return {
-//         ...state,
-//         person: state.people.filter(person => {
-//           return person._id === action.payload
-//         })
-//       }
-//     default:
-//       return state
-//   }
-// }
-
 export default combineReducers({
   errors: errorReducer,
-  createPerson: createReducer,
   people: peopleReducer,
-  // person: getPerson
 })

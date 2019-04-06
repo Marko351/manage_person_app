@@ -116,7 +116,6 @@ class CreatePerson extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  person: state.createPerson,
   errors: state.errors
 })
 

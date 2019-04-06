@@ -138,7 +138,6 @@ class UpdatePerson extends Component {
                 {errors.phone ? <MDBAlert color="danger">{errors.phone}</MDBAlert> : null}
                 <div className="text-center mb-4 mt-5">
                   <MDBBtn
-                    color="primary"
                     type="button"
                     className="btn-block z-depth-2"
                     onClick={this.onUpdatePerson}
