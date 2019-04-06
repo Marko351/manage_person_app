@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const Person = require('../../models/Person');
 
 // Import Validator
-const validatePersonInputs = require('../../validator/personsValidator');
+const validatePersonInputs = require('../../validator/personValidator');
 
 // @route  GET api/persons/test
 // @desc   Tests persons route
@@ -43,7 +43,7 @@ router.get('/:id', (req, res) => {
 
 // @route  POST api/persons/create
 // @desc   Create person data
-// @access Public
+// @access Public (with authentication should be Private)
 router.post('/create', (req, res) => {
 
   //Validate inputs
@@ -66,8 +66,8 @@ router.post('/create', (req, res) => {
 
 // @route  POST api/persons/:id
 // @desc   Update person data
-// @access Public
-router.post('/:id', (req, res) => {
+// @access Public (with authentication should be Private)
+router.put('/:id', (req, res) => {
 
   //Validate inputs
   const errors = validatePersonInputs(req.body);
@@ -102,7 +102,7 @@ router.post('/:id', (req, res) => {
 
 // @route  DELETE api/persons/:id
 // @desc   Delete person 
-// @access Public
+// @access Public (with authentication should be Private)
 router.delete('/:id', (req, res) => {
   Person.findOneAndRemove({ _id: req.params.id })
     .then(() => res.json({ success: true }))

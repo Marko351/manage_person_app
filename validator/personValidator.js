@@ -17,7 +17,7 @@ module.exports = function validatePersonInputs(data) {
     errors.address = 'Please enter your address!';
   }
 
-  if (!data.phone && data.name.trim().length < 6) {
+  if (!data.phone && data.phone.trim().length < 6) {
     errors.phone = 'Please enter valid phone number!';
   }
 
